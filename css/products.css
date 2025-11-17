@@ -1,0 +1,287 @@
+.bg-images{
+  text-align: center;
+}
+.bg-images img{
+  width:800px;
+  object-fit: cover;
+}
+.bg-images{
+  background-color: #f3f3f3;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main-head-of-products{
+  color:black;
+  padding-top:100px;
+  text-align: center;
+}
+.colored-word{
+  color:#f84258;
+}
+.colored-word-bigger-size{
+  color:#f84258;
+  font-size:35px;
+}
+.bigletter{ 
+  font-size: 80px;
+}
+.header-categories{
+  text-align: center;
+  padding-top:200px;
+  font-size:23px;
+  color:black;  
+}
+.info-of-head{
+  text-align: center;  
+}
+.products-hr{
+  border: 1px solid black;
+  width:100%;
+}
+.kurti, .western, .heels, .g-shoes, .shirts, .shoes, .joggers, .jeans{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding-left:50px;
+  
+}
+@media screen and (max-width:974px){
+  .kurti, .western, .heels, .g-shoes, .shirts, .shoes, .joggers, .jeans{
+    padding-left:20px;
+    padding-right:20px;
+  }
+}
+.btn-of-img{
+  border:none;
+  position: absolute;
+}
+.sry-msg{
+  color:black;
+  text-align:center;
+  padding-bottom:20px;
+} 
+
+.cart-details{
+  padding-left:50px;
+}
+.cart-details li{
+  list-style-type:decimal;
+}
+.head-of-cart{
+  color:#f84258;
+
+}
+.hr-of-cart-head{
+  border: 1px solid black;
+  width:120px;
+}
+.msg-ps{
+  color:black;
+}
+.last-hr-of-product{
+  border: 1px solid black;
+  width:70%;
+}
+.btn-clear-list{
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  transition: 0.2s;
+  background: none;
+  border:none;
+}
+.btn-clear-list:hover{
+  background-color: #ece3e3;
+}
+.ul_pr li{
+  font-size:18px;
+}
+img{
+  cursor: pointer;
+}
+
+
+/* ---------------- CART CONTAINER ---------------- */
+.cart-details {
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    padding: 25px;
+    border-radius: 15px;
+    width: 60%;
+    margin: auto;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.08);
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Cart Header */
+.head-of-cart {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #ff0066;
+    font-weight: 700;
+    animation: popIn 0.4s ease-out;
+}
+
+/* Cart Items */
+.cart-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0;
+    background: #fff;
+    padding: 12px 15px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.cart-row:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 8px 18px rgba(0,0,0,0.1);
+}
+
+/* Qty Buttons */
+.qty-btns button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: #ff0066;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.qty-btns button:hover {
+    background: #e6005c;
+    transform: scale(1.1);
+}
+
+/* Cart Summary */
+#cart-summary {
+    margin-top: 20px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 5px 18px rgba(0,0,0,0.06);
+    animation: slideUp 0.8s ease-out;
+}
+
+#cart-summary p, #cart-summary h3 {
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+#grandtotal {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ff0066;
+}
+
+/* Clear List Button */
+.btn-clear-list {
+    background: #555;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-clear-list:hover {
+    background: #333;
+    transform: translateY(-3px);
+}
+
+/* Checkout Button */
+.checkout-btn {
+    background: linear-gradient(135deg, #ff0066, #ff4d94);
+    color: white;
+    padding: 12px 22px;
+    border-radius: 12px;
+    cursor: pointer;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    transition: 0.3s ease;
+    box-shadow: 0px 8px 20px rgba(255, 0, 102, 0.3);
+}
+
+.checkout-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 12px 25px rgba(255, 0, 102, 0.4);
+}
+
+/* ---------------- CHECKOUT PANEL ---------------- */
+#checkout-panel {
+    margin-top: 20px;
+    background: #f7f7f7;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.08);
+    animation: slideIn 0.6s ease-out;
+}
+
+#checkout-panel input, 
+#checkout-panel textarea, 
+#checkout-panel select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+/* Checkout Confirm Button */
+#checkout-panel button {
+    background: #00b33c;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.2s ease;
+}
+
+#checkout-panel button:hover {
+    background: #009933;
+}
+
+/* ---------------- ORDER SUCCESS ---------------- */
+#order-success {
+    margin-top: 20px;
+    background: #d4ffd8;
+    padding: 18px;
+    border-radius: 12px;
+    text-align: center;
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* ---------------- ANIMATIONS ---------------- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
