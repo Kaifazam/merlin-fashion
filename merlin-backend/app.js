@@ -4,18 +4,19 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 const authRoutes = require('./routes/auth');
-const productsRoutes = require('./routes/product'); // use product.js, not products.js
+const productsRoutes = require('./routes/product');
 const cartRoutes = require('./routes/cart');
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Simple root route
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/index.html');
+  res.json({ message: "Backend is running" });
 });
 
-// Modern Mongoose connection (v7+)
+// Modern Mongoose connection
 async function connectDB() {
   try {
     await mongoose.connect(process.env.MONGO_URI);
@@ -28,16 +29,9 @@ async function connectDB() {
 
 connectDB();
 
-// Routes
+// API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/products', productsRoutes);
 app.use('/api/cart', cartRoutes);
 
 app.listen(5000, () => console.log('Server running on port 5000'));
-app.use(express.static(__dirname));
-
-
-
-
-
-
